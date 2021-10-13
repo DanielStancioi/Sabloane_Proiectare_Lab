@@ -23,7 +23,7 @@ public class Image implements Element{
 	@Override
 	public void print() {
 		// TODO Auto-generated method stub
-		System.out.print("Image: " + this.name);
+		System.out.println("Image: " + this.name);
 	}
 	
 }

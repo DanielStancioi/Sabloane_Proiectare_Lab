@@ -1,7 +1,7 @@
 package sabloaneProiectareBook;
 
 public class Paragraph implements Element{
-	private String text;
+	private String name;
 
 	public Paragraph() {
 		super();
@@ -9,21 +9,21 @@ public class Paragraph implements Element{
 
 	public Paragraph(String text) {
 		super();
-		this.text = text;
+		this.name = text;
 	}
 
-	public String getText() {
-		return text;
+	public String getName() {
+		return name;
 	}
 
-	public void setText(String text) {
-		this.text = text;
+	public void setName(String text) {
+		this.name = text;
 	}
 
 	@Override
 	public void print() {
 		// TODO Auto-generated method stub
-		System.out.print("Paragraph: " + this.text);
+		System.out.println("Paragraph: " + this.name);
 	}
 	
 }

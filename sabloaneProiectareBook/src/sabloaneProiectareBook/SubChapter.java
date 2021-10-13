@@ -23,19 +23,25 @@ public class SubChapter {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public int addNewParagraph(String p) {
+	public int createNewParagraph(String p) {
 		Paragraph par = new Paragraph(p);
 		elements.add(par);
 		return elements.indexOf(par);
 	}
-	public int addNewImage(String i) {
+	public int createNewImage(String i) {
 		Image img = new Image(i);
 		elements.add(img);
 		return elements.indexOf(img);
 	}
-	public int addNewTable(String t) {
+	public int createNewTable(String t) {
 		Table tab = new Table(t);
 		elements.add(tab);
 		return elements.indexOf(tab);
+	}
+	public void print() {
+		System.out.println("SubChapter: " + this.name);
+		for (Element el: this.elements) {
+			el.print();
+		}
 	}
 }

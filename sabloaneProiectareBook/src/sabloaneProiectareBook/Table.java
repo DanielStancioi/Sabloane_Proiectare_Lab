@@ -23,7 +23,7 @@ public class Table implements Element{
 	@Override
 	public void print() {
 		// TODO Auto-generated method stub
-		System.out.print("Table: " + this.name);
+		System.out.println("Table: " + this.name);
 	}
 	
 }
