@@ -6,6 +6,7 @@ public class Main {
 		// TODO Auto-generated method stub
 		Book discoTitanic = new Book("Disco Titanic");
 		Author rpGheo = new Author("Radu Pavel Gheo");
+		discoTitanic.addAuthor(rpGheo);
 		int indexChapterOne = discoTitanic.createChapter("Capitolul 1");
 		Chapter chp1 = discoTitanic.getChapter(indexChapterOne);
 		int indexSubChapterOneOne = chp1.createSubChapter("Subcapitolul 1.1");
@@ -18,7 +19,7 @@ public class Main {
 		scOneOne.createNewTable("Table 1");
 		scOneOne.createNewParagraph("Paragraph 5");
 		scOneOne.print();
-		
+		discoTitanic.print();
 		
 	}
 

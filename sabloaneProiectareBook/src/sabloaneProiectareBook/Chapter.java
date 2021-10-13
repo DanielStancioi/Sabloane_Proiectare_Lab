@@ -32,9 +32,9 @@ public class Chapter {
 		return subchapters.get(index);
 	}
 	public void print() {
-		System.out.println("Chapter "+ this.name + " with subchapters:");
+		System.out.println("Chapter "+ this.name);
 		for (SubChapter el : subchapters) {
-			System.out.println(el.getName());
+			el.print();
 		}
 	}
 }

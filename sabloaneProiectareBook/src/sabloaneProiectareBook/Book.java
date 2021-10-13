@@ -37,5 +37,10 @@ public class Book {
 		for (Author a: this.authors) {
 			System.out.print(a.getName()+", ");
 		}
+		System.out.print("\n");
+		for (Chapter ch : chapters) {
+			
+			ch.print();
+		}
 	}
 }

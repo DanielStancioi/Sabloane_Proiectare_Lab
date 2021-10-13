@@ -41,6 +41,7 @@ public class SubChapter {
 	public void print() {
 		System.out.println("SubChapter: " + this.name);
 		for (Element el: this.elements) {
+			System.out.print("	");
 			el.print();
 		}
 	}
