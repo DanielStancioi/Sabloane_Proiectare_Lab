@@ -7,9 +7,6 @@ public class Chapter {
 	private String name;
 	List<SubChapter> subchapters = new ArrayList<SubChapter>();
 
-	public Chapter() {
-		super();
-	}
 
 	public Chapter(String name) {
 		super();

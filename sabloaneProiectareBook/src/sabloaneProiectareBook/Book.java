@@ -14,10 +14,10 @@ public class Book {
 		super();
 		this.title = title;
 	}
-	public String getTitlu() {
+	public String getTitle() {
 		return title;
 	}
-	public void setTitlu(String title) {
+	public void setTitle(String title) {
 		this.title = title;
 	}
 	

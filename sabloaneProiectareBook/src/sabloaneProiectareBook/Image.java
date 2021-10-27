@@ -3,9 +3,6 @@ package sabloaneProiectareBook;
 public class Image implements Element{
 	private String name;
 
-	public Image() {
-		super();
-	}
 
 	public Image(String name) {
 		super();

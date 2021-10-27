@@ -3,10 +3,6 @@ package sabloaneProiectareBook;
 public class Table implements Element{
 	private String name;
 
-	public Table() {
-		super();
-	}
-
 	public Table(String name) {
 		super();
 		this.name = name;

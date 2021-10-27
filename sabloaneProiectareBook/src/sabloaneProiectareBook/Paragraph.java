@@ -2,11 +2,7 @@ package sabloaneProiectareBook;
 
 public class Paragraph implements Element{
 	private String name;
-
-	public Paragraph() {
-		super();
-	}
-
+	
 	public Paragraph(String text) {
 		super();
 		this.name = text;
