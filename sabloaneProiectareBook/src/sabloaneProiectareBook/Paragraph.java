@@ -1,6 +1,6 @@
 package sabloaneProiectareBook;
 
-public class Paragraph implements Element{
+public class Paragraph extends Element{
 	private String name;
 	
 	public Paragraph(String text) {
@@ -34,6 +34,20 @@ public class Paragraph implements Element{
 	public Element get(int i) {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+
+	@Override
+	public void setParent(Element p) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public Element getParent() {
+		// TODO Auto-generated method stub
+		return this.parent;
 	}
 	
 }

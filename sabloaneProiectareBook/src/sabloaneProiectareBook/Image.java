@@ -1,6 +1,7 @@
 package sabloaneProiectareBook;
 
-public class Image implements Element{
+public class Image extends Element{
+	private Element parent;
 	private String name;
 
 
@@ -31,6 +32,18 @@ public class Image implements Element{
 	public Element get(int i) {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	@Override
+	public void setParent(Element p) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Element getParent() {
+		// TODO Auto-generated method stub
+		return this.parent;
 	}
 	
 }
