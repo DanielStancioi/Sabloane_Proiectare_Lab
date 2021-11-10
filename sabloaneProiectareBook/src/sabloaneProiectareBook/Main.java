@@ -9,7 +9,7 @@ public class Main {
 		ImageProxy img3 = new ImageProxy("Kirby Griffin");
 		Section playboyS1 = new Section("Front Cover");
 		playboyS1.add(img1);
-		playboyS1.add(img2);
+		
 		Section playboyS2 = new Section("Summer Girls");
 		playboyS2.add(img2);
 		playboyS2.add(img3);
