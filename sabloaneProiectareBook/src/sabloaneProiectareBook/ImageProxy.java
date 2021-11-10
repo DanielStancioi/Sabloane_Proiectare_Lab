@@ -1,30 +1,33 @@
 package sabloaneProiectareBook;
 
-import java.util.concurrent.TimeUnit;
-
-public class Image extends Element{
-	private Element parent;
-	private String name;
-
-
-	public Image(String name) {
+public class ImageProxy extends Element{
+	 private Image img;
+	 private String url;
+	 private Element parent;
+	 
+	 public ImageProxy(String url) {
 		super();
-		this.name = name;
-		try {
-		TimeUnit.SECONDS.sleep(5);
-		} catch (InterruptedException e) {
-		e.printStackTrace();
-		}
+		this.url = url;
+		this.img = null;
 	}
+
+	public Image loadImage() {
+		 if (this.img == null) {
+	            this.img = new Image(url);
+	        }
+		 return this.img;
+	 }
 
 	@Override
 	public void print() {
 		// TODO Auto-generated method stub
-		System.out.println("Image: " + this.name);
+		loadImage();
+		this.img.print();
+		
 	}
 
 	@Override
-	public void add(Element e) {
+	public void add(Element e) throws CloneNotSupportedException {
 		// TODO Auto-generated method stub
 		
 	}
@@ -45,13 +48,13 @@ public class Image extends Element{
 	public void setParent(Element p) {
 		// TODO Auto-generated method stub
 		this.parent=p;
-		
 	}
 
 	@Override
 	public Element getParent() {
 		// TODO Auto-generated method stub
+		loadImage();
 		return this.parent;
 	}
-	
+
 }
