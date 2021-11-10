@@ -1,5 +1,7 @@
 package sabloaneProiectareBook;
 
+import java.util.concurrent.TimeUnit;
+
 public class Image extends Element{
 	private Element parent;
 	private String name;
@@ -8,6 +10,11 @@ public class Image extends Element{
 	public Image(String name) {
 		super();
 		this.name = name;
+		try {
+		TimeUnit.SECONDS.sleep(5);
+		} catch (InterruptedException e) {
+		e.printStackTrace();
+		}
 	}
 
 	@Override

@@ -26,21 +26,19 @@ public class Section extends Element{
 
 
 	@Override
-	public void add(Element e) {
+	public void add(Element e) throws CloneNotSupportedException {
 		// TODO Auto-generated method stub
 		Element el;
-		try {
+		
 			if (elements != null){
 				e.setParent(this);
 			}else e.setParent(null);
 			e.setParent(this);
 			el = (Element) e.clone();
 			elements.add(el);
-		} catch (CloneNotSupportedException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
 		
+		
+	
 	}
 
 

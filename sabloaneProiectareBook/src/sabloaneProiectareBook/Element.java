@@ -3,7 +3,7 @@ package sabloaneProiectareBook;
 public abstract class Element implements Cloneable{
 	protected Element parent;
 	public abstract void print();
-	public abstract void add(Element e);
+	public abstract void add(Element e) throws CloneNotSupportedException;
 	public abstract void remove(Element e);
 	public abstract Element get(int i);
 	public abstract void setParent(Element p);
