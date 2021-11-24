@@ -49,5 +49,17 @@ public class Paragraph extends Element{
 		// TODO Auto-generated method stub
 		return this.parent;
 	}
-	
+
+
+	public String getName() {
+		return name;
+	}
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+	public void setAlignStrategy(AlignStrategy a) {
+		a.render(this);
+	}
 }
