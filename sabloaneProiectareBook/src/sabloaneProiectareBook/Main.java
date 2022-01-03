@@ -74,10 +74,10 @@ public class Main {
 
         cap2.accept(new RenderContentVisitor());
 
-        GenerateToC toc = new GenerateToC();
-        cap1.accept(toc);
-        cap2.accept(toc);
-        TableOfContents res = toc.getToc();
+        GenerateToC tofc = new GenerateToC();
+        cap1.accept(tofc);
+        cap2.accept(tofc);
+        TableOfContents res = tofc.getToc();
         res.render();
         
         BookStatistics s = new BookStatistics();
