@@ -3,7 +3,7 @@ package sabloaneProiectareBook;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Book extends Section{
+public class Book extends Section implements Visitee{
 	
 	List<Author> authors = new ArrayList<Author>();
 
@@ -24,4 +24,17 @@ public class Book extends Section{
 		System.out.println();
 		super.print();
 	}
+	public void render() {
+
+		System.out.println("Authors: ");
+		for (Author a: authors) {
+			a.print();
+		}
+		System.out.println();
+		super.print();
+	}
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visit(this);
+    }
 }

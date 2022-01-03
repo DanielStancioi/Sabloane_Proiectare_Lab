@@ -1,6 +1,6 @@
 package sabloaneProiectareBook;
 
-public class Table extends Element{
+public class Table extends Element implements Visitee{
 	private Element parent;
 	private String name;
 
@@ -33,16 +33,24 @@ public class Table extends Element{
 		return null;
 	}
 
-	@Override
-	public void setParent(Element p) {
-		// TODO Auto-generated method stub
-		
-	}
 
-	@Override
+
+
+
 	public Element getParent() {
 		// TODO Auto-generated method stub
 		return this.parent;
+	}
+
+	@Override
+	public void accept(Visitor visitor) {
+		// TODO Auto-generated method stub
+		visitor.visit(this);
+		
+	}
+	public void render() {
+		// TODO Auto-generated method stub
+		System.out.println("Table: " + this.name);
 	}
 	
 }

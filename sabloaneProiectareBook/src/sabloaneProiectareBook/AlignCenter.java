@@ -1,18 +1,16 @@
 package sabloaneProiectareBook;
 
-public class AlignLeft implements AlignStrategy {
+public class AlignCenter implements AlignStrategy {
 
-	
-	public AlignLeft() {
+	public AlignCenter() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-
 	@Override
 	public void render(Paragraph p) {
 		// TODO Auto-generated method stub
 		String text = p.getName();
-		text = text+"###";
+		text = "###" + text+ "###";
 		p.setName(text);
 	}
 

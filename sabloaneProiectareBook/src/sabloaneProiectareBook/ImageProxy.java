@@ -1,6 +1,6 @@
 package sabloaneProiectareBook;
 
-public class ImageProxy extends Element{
+public class ImageProxy extends Element implements  Visitee{
 	 private Image img;
 	 private String url;
 	 private Element parent;
@@ -27,7 +27,7 @@ public class ImageProxy extends Element{
 	}
 
 	@Override
-	public void add(Element e) throws CloneNotSupportedException {
+	public void add(Element e)  {
 		// TODO Auto-generated method stub
 		
 	}
@@ -44,17 +44,24 @@ public class ImageProxy extends Element{
 		return null;
 	}
 
-	@Override
-	public void setParent(Element p) {
-		// TODO Auto-generated method stub
-		this.parent=p;
-	}
 
-	@Override
+	
 	public Element getParent() {
 		// TODO Auto-generated method stub
 		loadImage();
 		return this.parent;
+	}
+	public void render() {
+		// TODO Auto-generated method stub
+		loadImage();
+		this.img.print();
+	}
+
+	@Override
+	public void accept(Visitor visitor) {
+		// TODO Auto-generated method stub
+		visitor.visit(this);
+		
 	}
 
 }

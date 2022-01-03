@@ -3,14 +3,24 @@ package sabloaneProiectareBook;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Section extends Element{
-	private Element parent;
+public class Section extends Element implements Visitee{
+	
 	private String name;
 	List<Element> elements = new ArrayList<Element>();
 
 
 	public Section(String name) {
 		super();
+		this.name = name;
+	}
+
+	
+	public String getName() {
+		return name;
+	}
+
+
+	public void setName(String name) {
 		this.name = name;
 	}
 
@@ -23,19 +33,22 @@ public class Section extends Element{
 			el.print();
 		}
 	}
+	public void render() {
+		// TODO Auto-generated method stub
+		System.out.println(this.name);
+		for (Element el: elements) {
+			el.print();
+		}
+	}
 
 
 	@Override
-	public void add(Element e) throws CloneNotSupportedException {
+	public void add(Element e)  {
 		// TODO Auto-generated method stub
-		Element el;
-		
-			if (elements != null){
-				e.setParent(this);
-			}else e.setParent(null);
-			e.setParent(this);
-			el = (Element) e.clone();
-			elements.add(el);
+        if (e.parent == null) {
+            this.elements.add(e);
+            e.parent = this;
+        }
 		
 		
 	
@@ -57,16 +70,12 @@ public class Section extends Element{
 
 
 	@Override
-	public void setParent(Element p) {
+	public void accept(Visitor visitor) {
 		// TODO Auto-generated method stub
-		this.parent=p;
-	}
-
-
-	@Override
-	public Element getParent() {
-		// TODO Auto-generated method stub
-		return this.parent;
+		visitor.visit(this);
+        for (Element el:elements) {
+            el.accept(visitor);
+        }
 	}
 
 

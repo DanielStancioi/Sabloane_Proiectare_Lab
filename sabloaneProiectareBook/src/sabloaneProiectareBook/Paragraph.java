@@ -1,6 +1,6 @@
 package sabloaneProiectareBook;
 
-public class Paragraph extends Element{
+public class Paragraph extends Element implements Visitee{
 	private String name;
 	
 	public Paragraph(String text) {
@@ -37,14 +37,7 @@ public class Paragraph extends Element{
 	}
 
 
-	@Override
-	public void setParent(Element p) {
-		// TODO Auto-generated method stub
-		
-	}
 
-
-	@Override
 	public Element getParent() {
 		// TODO Auto-generated method stub
 		return this.parent;
@@ -61,5 +54,16 @@ public class Paragraph extends Element{
 	}
 	public void setAlignStrategy(AlignStrategy a) {
 		a.render(this);
+	}
+	public void render() {
+		// TODO Auto-generated method stub
+		System.out.println("Paragraph: " + this.name);
+	}
+
+
+	@Override
+	public void accept(Visitor visitor) {
+		// TODO Auto-generated method stub
+		visitor.visit(this);
 	}
 }

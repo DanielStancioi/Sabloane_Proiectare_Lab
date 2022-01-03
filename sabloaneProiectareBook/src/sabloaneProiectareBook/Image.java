@@ -10,11 +10,11 @@ public class Image extends Element{
 	public Image(String name) {
 		super();
 		this.name = name;
-		try {
-		TimeUnit.SECONDS.sleep(5);
-		} catch (InterruptedException e) {
-		e.printStackTrace();
-		}
+		//try {
+		//TimeUnit.SECONDS.sleep(5);
+		//} catch (InterruptedException e) {
+		//e.printStackTrace();
+		//}
 	}
 
 	@Override
@@ -41,17 +41,21 @@ public class Image extends Element{
 		return null;
 	}
 
-	@Override
-	public void setParent(Element p) {
-		// TODO Auto-generated method stub
-		this.parent=p;
-		
-	}
 
-	@Override
+	
 	public Element getParent() {
 		// TODO Auto-generated method stub
 		return this.parent;
+	}
+	public void render() {
+		// TODO Auto-generated method stub
+		System.out.println("Image: " + this.name);
+	}
+
+	@Override
+	public void accept(Visitor visitor) {
+		// TODO Auto-generated method stub
+		visitor.visit(this);
 	}
 	
 }

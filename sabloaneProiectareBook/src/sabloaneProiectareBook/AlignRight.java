@@ -11,7 +11,7 @@ public class AlignRight implements AlignStrategy{
 	public void render(Paragraph p) {
 		// TODO Auto-generated method stub
 		String text = p.getName();
-		text = "#"+text;
+		text = "###"+text;
 		p.setName(text);
 	}
 

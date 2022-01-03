@@ -1,28 +1,25 @@
 package sabloaneProiectareBook;
 
 public class DocumentManager {
-	private static DocumentManager single_instance = null;
-    public Book b;
- 
-    private DocumentManager()
-    {
-        super();
-    }
- 
-    public static DocumentManager getInstance()
-    {
-        if (single_instance == null)
-            single_instance = new DocumentManager();
- 
-        return single_instance;
+	private Book book;
+
+    private DocumentManager() {
     }
 
-	public Book getBook() {
-		return b;
-	}
+    private static class SingletonHolder {
+        private static DocumentManager INSTANCE = new DocumentManager();
+    }
 
-	public void setBook(Book b) {
-		this.b = b;
-	}
+    public static DocumentManager getInstance() {
+        return SingletonHolder.INSTANCE;
+    }
+
+    public Book getBook() {
+        return this.book;
+    }
+
+    public void setBook(Book book) {
+        this.book = book;
+    }
     
 }
