@@ -7,3 +7,9 @@ all good
 https://github.com/DanielStancioi/Sabloane_Proiectare_Lab/tree/28a4db8d46202e7ad9cdd955540cd9774a80cd80
 
 all good
+
+# Feedback lab5:
+https://github.com/DanielStancioi/Sabloane_Proiectare_Lab/tree/b7b81f894862211c2ef20f969727274314a19974
+
+- allignment render function does the printing. Do not change the text.
+- singleton - book member should be private (you have get/set method)
