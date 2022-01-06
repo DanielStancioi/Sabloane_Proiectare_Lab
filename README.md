@@ -13,3 +13,10 @@ https://github.com/DanielStancioi/Sabloane_Proiectare_Lab/tree/b7b81f894862211c2
 
 - allignment render function does the printing. Do not change the text.
 - singleton - book member should be private (you have get/set method)
+
+# Feedback lab6:
+https://github.com/DanielStancioi/Sabloane_Proiectare_Lab/tree/9f3bda6f2f6f26d3daa19fa1941b77e18ed16b06
+
+all good
+
+# Proposed grade: 10
